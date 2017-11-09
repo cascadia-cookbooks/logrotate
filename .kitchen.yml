@@ -17,3 +17,20 @@ suites:
     attributes: 
       cas_logrotate:
         entries:
+          example:
+            logs: '/var/log/example/*.log'
+            su: 'root root'
+            frequency: 'daily'
+            notifempty: true
+            size: '1m'
+            rotate: '10'
+            maxage: '14'
+            create: '0644 root root'
+            compress: true
+            delaycompress: true
+            dateext: true
+            missingok: true
+            copytruncate: true
+            prerotate: 'echo "prerotate command"'
+            postrotate: 'echo "postrotate command"'
+            sharedscripts: true

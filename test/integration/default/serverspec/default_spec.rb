@@ -23,6 +23,7 @@ describe 'cas_logrotate::default' do
         its(:content) { should include 'delaycompress' }
         its(:content) { should include 'dateext' }
         its(:content) { should include 'missingok' }
+        its(:content) { should include 'copytruncate' }
         its(:content) { should include 'echo "prerotate command"' }
         its(:content) { should include 'echo "postrotate command"' }
         its(:content) { should include 'sharedscripts' }

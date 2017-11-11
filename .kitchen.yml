@@ -13,7 +13,7 @@ platforms:
 suites:
   - name: default
     run_list:
-    - recipe[cas_logrotate::default]
+      - recipe[cas_logrotate::default]
     attributes: 
       cas_logrotate:
         entries:
